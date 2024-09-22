@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Network IT Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Network IT Solutions</h1>
+        <select id="language-selector" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+        </select>
+        <nav>
+            <ul>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Empowering Your Network Solutions</h2>
+            <p>Providing reliable, secure, and efficient networking solutions for your business.</p>
+            <img src="path/to/your/network-graphic.jpg" alt="Network Graphic" class="hero-image">
+        </section>
+
+        <section id="about">
+            <h2 class="section-title" data-en="About Us" data-de="Über Uns">About Us</h2>
+            <p class="section-content" data-en="Welcome to Your Network IT Solutions. We specialize in providing top-notch networking solutions tailored to meet the needs of businesses of all sizes. Our team of experienced professionals is dedicated to ensuring the reliability, security, and performance of your network infrastructure."
+               data-de="Willkommen bei Your Network IT Solutions. Wir sind auf die Bereitstellung von erstklassigen Netzwerklösungen spezialisiert, die auf die Bedürfnisse von Unternehmen jeder Größe zugeschnitten sind. Unser Team erfahrener Fachleute setzt sich dafür ein, die Zuverlässigkeit, Sicherheit und Leistung Ihrer Netzwerk-Infrastruktur zu gewährleisten.">
+                Welcome to Your Network IT Solutions. We specialize in providing top-notch networking solutions tailored to meet the needs of businesses of all sizes. Our team of experienced professionals is dedicated to ensuring the reliability, security, and performance of your network infrastructure.
+            </p>
+        </section>
+
+        <section id="services">
+            <h2 class="section-title" data-en="Our Services" data-de="Unsere Dienstleistungen">Our Services</h2>
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'NetworkDesign')" data-en="Network Design" data-de="Netzwerkdesign">Network Design</button>
+                <button class="tablinks" onclick="openTab(event, 'Security')" data-en="Network Security" data-de="Netzwerksicherheit">Network Security</button>
+                <button class="tablinks" onclick="openTab(event, 'Consulting')" data-en="Consulting" data-de="Beratung">Consulting</button>
+            </div>
+
+            <div id="NetworkDesign" class="tabcontent">
+                <h3 data-en="Network Design and Architecture" data-de="Netzwerkdesign und -architektur">Network Design and Architecture</h3>
+                <p data-en="We create customized network designs that enhance performance and scalability. Our solutions are tailored to meet the specific needs of your organization."
+                   data-de="Wir erstellen maßgeschneiderte Netzwerkdesigns, die die Leistung und Skalierbarkeit verbessern. Unsere Lösungen sind auf die spezifischen Bedürfnisse Ihrer Organisation zugeschnitten.">
+                    We create customized network designs that enhance performance and scalability. Our solutions are tailored to meet the specific needs of your organization.
+                </p>
+                <ul>
+                    <li data-en="LAN/WAN Design" data-de="LAN/WAN-Design">LAN/WAN Design</li>
+                    <li data-en="Data Center Network Architecture" data-de="Netzwerkarchitektur im Rechenzentrum">Data Center Network Architecture</li>
+                    <li data-en="Cloud Integration Solutions" data-de="Cloud-Integrationslösungen">Cloud Integration Solutions</li>
+                </ul>
+            </div>
+
+            <div id="Security" class="tabcontent" style="display:none">
+                <h3 data-en="Network Security" data-de="Netzwerksicherheit">Network Security</h3>
+                <p data-en="Protect your business from cyber threats with our comprehensive security solutions."
+                   data-de="Schützen Sie Ihr Unternehmen vor Cyber-Bedrohungen mit unseren umfassenden Sicherheitslösungen.">
+                    Protect your business from cyber threats with our comprehensive security solutions.
+                </p>
+                <ul>
+                    <li data-en="Firewall Solutions" data-de="Firewall-Lösungen">Firewall Solutions</li>
+                    <li data-en="Intrusion Detection Systems" data-de="Intrusion Detection Systeme">Intrusion Detection Systems</li>
+                    <li data-en="Security Audits" data-de="Sicherheitsaudits">Security Audits</li>
+                </ul>
+            </div>
+
+            <div id="Consulting" class="tabcontent" style="display:none">
+                <h3 data-en="Consulting Services" data-de="Beratungsdienste">Consulting Services</h3>
+                <p data-en="Our expert consultants work with you to develop a strategic plan that aligns your IT infrastructure with business goals."
+                   data-de="Unsere Experten beraten Sie bei der Entwicklung eines strategischen Plans, der Ihre IT-Infrastruktur mit den Geschäftszielen in Einklang bringt.">
+                    Our expert consultants work with you to develop a strategic plan that aligns your IT infrastructure with business goals.
+                </p>
+                <ul>
+                    <li data-en="IT Strategy Development" data-de="Entwicklung von IT-Strategien">IT Strategy Development</li>
+                    <li data-en="Vendor Management" data-de="Lieferantenmanagement">Vendor Management</li>
+                    <li data-en="Change Management" data-de="Änderungsmanagement">Change Management</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title" data-en="Contact Us" data-de="Kontaktieren Sie Uns">Contact Us</h2>
+            <p class="section-content" data-en="If you have any questions or need assistance, feel free to reach out to us:"
+               data-de="Wenn Sie Fragen haben oder Hilfe benötigen, können Sie uns gerne kontaktieren:">
+                If you have any questions or need assistance, feel free to reach out to us:
+            </p>
+            <form action="#" method="post">
+                <label for="name" data-en="Name:" data-de="Name:">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email" data-en="Email:" data-de="E-Mail:">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message" data-en="Message:" data-de="Nachricht:">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" data-en="Send Message" data-de="Nachricht Senden">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Network IT Solutions. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function changeLanguage() {
+            const language = document.getElementById('language-selector').value;
+            const elements = document.querySelectorAll('[data-en], [data-de]');
+            elements.forEach((el) => {
+                el.innerText = el.getAttribute(`data-${language}`);
+            });
+        }
+
+        function openTab(evt, tabName) {
+            const tabcontent = document.getElementsByClassName("tabcontent");
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            const tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
